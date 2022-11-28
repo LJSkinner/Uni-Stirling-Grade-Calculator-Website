@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uni of Stirling Degree Classification/Grade Calculator Website</title>
+    <title>Degree Calc - Stirling</title>
+
+    <!--Temp script, to use tailwind fully it should be installed through npm-->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 </head>
-<body>
+<body class="h-screen">
+
+    <noscript>
+        <strong>Unfortunately this website doesn't function without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+      <header>
+        <nav class="bg-gray-700 text-white">
+            <div class="mx-auto py-4">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+                        <div id="logo" class="flex flex-shrink-0 items-center space-x-4">
+                            <img src=" " class="w-16 h-16 ml-4 border border-1 border-white" alt="Logo">
+                            <h1 class="text-2xl font-semibold"><a href="index.html">Degree Calc - Stirling</a></h1>
+                            <!-- TODO: Layer Stirling beneath Degree Calc 
+                                <h4 class="text-xl">Stirling</h4> -->
+                        </div>
+
+                        <!--Collapse this part for mobile menu-->
+                        <div class="hidden md:ml-6 md:block">
+                            <div id="nav-links" class="absolute inset-y-3 right-5 items-center pr-9 flex space-x-4 text-lg font-bold">
+                                <!--Repeated classes should be removed by creating custom styles in tailwind once installed using npm-->
+                                <a href="index.html" class="p-5 py-2 rounded-md hover:bg-black hover:text-white">Home</a>
+                                <a href="faq.html" class="p-5 py-2 rounded-md hover:bg-black hover:text-white">FAQ</a>
+                                <a href="contact.html" class="p-5 py-2 rounded-md hover:bg-black hover:text-white">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+      </header>
+
+      <!--Main content will go in here-->
+      <main class="h-screen">
+
+      </main>
+
+    <footer class="bg-gray-700 py-9">
+        <div class="text-right text-white">
+            <p class="pr-9">&copy; Project Roundtable 2022</p>
+        </div>
+    </footer>
+
 </body>
 </html>
