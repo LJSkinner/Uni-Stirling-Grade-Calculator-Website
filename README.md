@@ -6,11 +6,10 @@ students calculate their final grade/degree classification. We found that it was
 
 We were inspired by a similar project by a student at Uni of St Andrews. So please go check out their website https://grades.lukasa.co.uk/ and repo https://github.com/Lukasa/st-andrews-grades while you are here.
 
-## Frameworks, libaries etc.
-TO COME
-
 ## Disclaimers & Legal
-First off, we made this for fun and are doing it in our own time. We are not being serviced by the University of Stirling, our website has no formal affliation with the University of Stirling and does not represent their views, policies or other statements. This website is an original creation, an no assets are being used from University of Stirlings own website. The only reference material we used for this website, is the publicly available grade descriptor which can be found at TO DO. 
+First off, we made this for fun and are doing it in our own time. We are not being serviced by the University of Stirling, our website has no formal affliation with the University of Stirling and does not represent their views, policies or other statements. This website is an original creation, an no assets are being used from University of Stirlings own website. The only reference material we used for this website, is the publicly available grade descriptor which can be found at:
+
+https://www.stir.ac.uk/about/professional-services/student-academic-and-corporate-services/academic-registry/academic-policy-and-practice/quality-handbook/examination-and-degree-classification/. 
 
 Due to the large number of edge cases, such as students studying abroad, students on dual programs etc. it would be impossible for us to cover all of them. As such the calculator represents what we see as the majority cases. If you fall into one of those subsets, we would recommend chatting with your Chief Examiner instead of relying on this calculator. While we aim to be as close as possible, we absolutely cannot guarrantee that our calculator will 100% accurately predict your degree classification, and we take no responsibility if it ends up being incorrect. This should only be used as a guide, and you should defer any questions to your Faculty Head or Chief Examiner. We may remove or cease production of this website at any point.
 
