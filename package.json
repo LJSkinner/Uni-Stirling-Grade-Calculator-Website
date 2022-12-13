@@ -1,0 +1,24 @@
+{
+  "name": "uni-stirling-grade-calculator-website",
+  "version": "1.0.0",
+  "description": "A degree classification and grade calculator for University of Stirling students.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind_build": "tailwindcss -i src/css/tailwind.css -o src/css/main.css",
+    "tailwind_dev": "tailwindcss -i src/css/tailwind.css -o src/css/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Project-Roundtable/Uni-Stirling-Grade-Calculator-Website.git"
+  },
+  "author": "Luke Skinner, Andrew McGuckin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Project-Roundtable/Uni-Stirling-Grade-Calculator-Website/issues"
+  },
+  "homepage": "https://github.com/Project-Roundtable/Uni-Stirling-Grade-Calculator-Website#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
