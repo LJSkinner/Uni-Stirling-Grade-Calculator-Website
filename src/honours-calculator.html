@@ -106,6 +106,30 @@
                         </div>
                     </div>
                 </section>
+
+                <!--Contains the predominance checker and grade boundary summary-->
+                <section id="predominance-info" class="basis-full 2xl:basis-5/12 px-4 2xl:pr-4 2xl:pl-0">
+                    <div class="flex flex-col py-6">
+                        <div id="predominance-checker" class="text-black border-2 border-black">
+                            <div class="grid gap-y-6 p-6">
+                                <h1 class="text-2xl font-bold">Predominance Checker</h1>
+                                <div class="border-2 border-black text-lg rounded-md mx-auto px-4 py-2">Average Module Grade - 65</div>
+                                <h4 class="text-xl font-bold">Modules meeting predominance</h4>
+                                <!--TODO - Test and implement pie chart-->
+                                <div class="border-2 border-black rounded-md py-12">
+                                    <p class="text-xl tracking-widest">Pie chart summary</p>
+                                </div>
+                                <p class="py-3 bg-lime-700 rounded-md text-white text-xl">Your Predicted Degree Classification is: <strong id="classResult" class="block select-all">2:1 Upper Second Class</strong></p>
+                            </div>
+                        </div>
+
+                        <div id="grade-boundaries" class="text-black font-semibold text-lg border-2 border-black p-3 mt-6 pb-6">
+                            <p class="text-2xl font-bold p-2">Grade Boundaries</p>
+                            <p class="select-all">1st Class (70+) <br> 2:1 Upper Second Class Division (60-69) <br> 2:2 Lower Second Class Division (50-59) <br> 3rd Class (40-49)</p>
+                        </div>
+                    </div>
+                </section>
+                
             </div>
         </section>
       </main>
