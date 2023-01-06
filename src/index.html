@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calculate your honours, masters or module results for University of Stirling.">
     <link rel="stylesheet" href="css/main.css">
+    <!-- TODO: We may have to change this pathing when it comes to deploying, but this is fine for now. -->
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <title>Degree Calculator - Stirling | Home</title>
 </head>
 <body class="h-screen">
@@ -21,7 +23,7 @@
                     <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                         <div id="logo" class="flex flex-shrink-0 items-center space-x-4">
                             <img src=" " class="w-16 h-16 ml-4 border border-1 border-white" alt="Logo">
-                            <h1 class="text-2xl font-semibold"><a href="index.html">Degree Calc - Stirling</a></h1>
+                            <h1 class="text-2xl font-semibold"><a href="index.html">Degree Calculator - Stirling</a></h1>
                             <!-- TODO: Layer Stirling beneath Degree Calc 
                                 <h4 class="text-xl">Stirling</h4> -->
                         </div>
@@ -105,6 +107,9 @@
             <p class="pr-9">&copy; Project Roundtable 2022</p>
         </div>
     </footer>
-
+    
+  <!-- TODO: We may have to change this pathing when it comes to deploying, but this is fine for now. -->   
+  <script src="../node_modules/aos/dist/aos.js"></script>
+  <script>AOS.init()</script>
 </body>
 </html>

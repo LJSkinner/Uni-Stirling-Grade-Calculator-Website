@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Project-Roundtable/Uni-Stirling-Grade-Calculator-Website#readme",
   "devDependencies": {
     "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
   }
 }
