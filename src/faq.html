@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your honours, masters or module results for University of Stirling.">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- TODO: We may have to change this pathing when it comes to deploying, but this is fine for now. -->
+    <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
+    <title>Degree Calculator - Stirling | FAQ</title>
+</head>
+<body class="h-screen">
+
+    <noscript>
+        <strong>Unfortunately this website doesn't function without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+      <header>
+        <nav class="bg-gray-700 text-white">
+            <div class="mx-auto py-4">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+                        <div id="logo" class="flex flex-shrink-0 items-center space-x-4">
+                            <img src=" " class="w-16 h-16 ml-4 border border-1 border-white" alt="Logo">
+                            <h1 class="text-2xl font-semibold"><a href="index.html">Degree Calculator - Stirling</a></h1>
+                            <!-- TODO: Layer Stirling beneath Degree Calc 
+                                <h4 class="text-xl">Stirling</h4> -->
+                        </div>
+
+                        <!--Collapse this part for mobile menu-->
+                        <div class="hidden md:ml-6 md:block">
+                            <div id="nav-links" class="absolute inset-y-3 right-5 items-center pr-9 flex space-x-4 text-lg font-bold">
+                                <!--Repeated classes should be removed by creating custom styles in tailwind once installed using npm-->
+                                <a href="index.html" class="p-5 py-2 rounded-md hover:bg-black hover:text-white">Home</a>
+                                <a href="faq.html" class="p-5 py-2 rounded-md hover:bg-black hover:text-white">FAQ</a>
+                                <a href="contact.html" class="p-5 py-2 rounded-md hover:bg-black hover:text-white">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+      </header>
+
+      <main>
+        <section class="h-max py-16">
+            <div class="text-gray-700">
+                <h1 class="p-8 text-3xl md:text-4xl xl:text-6xl text-center font-bold">Frequently Asked Questions</h1>
+            </div>
+
+            <!--Sample Question section-->
+            <!--Design by https://codepen.io/robstinson/pen/oNLaLMN?editors=1010 -->
+            <section class="mx-auto xl:w-3/4 4xl:w-4/6 bg-white border-4  xl:border-8 border-cyan-700 xl:rounded-xl shadow-2xl p-16 my-16">
+
+                <div class="flex flex-col flex-grow gap-y-8 md:gap-y-16">
+                    <div class="flex w-full max-w-2xl">
+                        <p class="bg-cyan-800 text-white p-4 md:p-8 rounded-r-3xl rounded-tl-3xl md:text-xl 4xl:text-2xl font-semibold" data-os="fade-right">What degrees can I calculate with this calculator?</p>
+                    </div>
+                    <div class="flex w-full max-w-5xl ml-auto justify-end">
+                        <p class="bg-lime-700 text-white p-4 md:p-8 rounded-l-3xl rounded-tr-3xl font-semibold md:text-lg 4xl:text-2xl">
+                            Currently we cover Undergraduate Degrees that include one or two years of study. 
+                            Undergraduate Degrees with Honours (Dissertation) are also included.
+                        </p>
+                        <div class="hidden lg:block flex-shrink-0 h-10 w-10 rounded-full bg-gray-300 ml-3 place-self-end"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col flex-grow gap-y-8 md:gap-y-16 mt-16">
+                    <hr>
+                    <div class="flex w-full max-w-2xl">
+                        <p class="bg-cyan-800 text-white p-4 md:p-8 rounded-r-3xl rounded-tl-3xl md:text-xl 4xl:text-2xl font-semibold" data-os="fade-right">Any boring legal stuff I should know about this website?</p>
+                    </div>
+                    <div class="flex w-full max-w-5xl ml-auto justify-end">
+                        <p class="bg-lime-700 text-white p-4 md:p-8 rounded-l-3xl rounded-tr-3xl font-semibold md:text-lg 4xl:text-2xl">
+                            Yes actually. We're not being paid or serviced by the University to create this website, this is being created in our free time as a self project. 
+                            We maintain this website ourselves and thus at any point we could seize production. Our website is not affiliated with University of Stirling in any way, 
+                            and is not representative of their views or values. This calculator is also not a 100% accurate fool proof estimate of your grades, and so you should use 
+                            this as a guide and not a rule. We don't take any responsibility for your classification/grades being inaccurate to what you receive.
+                        </p>
+                        <div class="hidden lg:block flex-shrink-0 h-10 w-10 rounded-full bg-gray-300 ml-3 place-self-end"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col flex-grow gap-y-8 md:gap-y-16 mt-16">
+                    <hr>
+                    <div class="flex w-full max-w-2xl">
+                        <p class="bg-cyan-800 text-white p-4 md:p-8 rounded-r-3xl rounded-tl-3xl md:text-xl 4xl:text-2xl font-semibold" data-os="fade-right">Does this website use grade information for anything other than calculating degrees/module results?</p>
+                    </div>
+                    <div class="flex w-full max-w-5xl ml-auto justify-end">
+                        <p class="bg-lime-700 text-white p-4 md:p-8 rounded-l-3xl rounded-tr-3xl font-semibold md:text-lg 4xl:text-2xl">
+                            Absolutely not. Although we plan to implement functionality to allow you to store your grade info for later use, this is only being used for your benefit and nothing else. 
+                            We would never sell on other peoples data. All of our source code is public and you're free to check this yourself.
+                        </p>
+                        <div class="hidden lg:block flex-shrink-0 h-10 w-10 rounded-full bg-gray-300 ml-3 place-self-end"></div>
+                    </div>
+                </div> 
+
+                <div class="flex flex-col flex-grow gap-y-8 md:gap-y-16 mt-16">
+                    <hr>
+                    <div class="flex w-full max-w-2xl">
+                        <p class="bg-cyan-800 text-white p-4 md:p-8 rounded-r-3xl rounded-tl-3xl md:text-xl 4xl:text-2xl font-semibold" data-os="fade-right">How accurate is this calculator at calculating my scores/degree classification?</p>
+                    </div>
+                    <div class="flex w-full max-w-5xl ml-auto justify-end">
+                        <p class="bg-lime-700 text-white p-4 md:p-8 rounded-l-3xl rounded-tr-3xl font-semibold md:text-lg 4xl:text-2xl">
+                            We try to be as accurate as possible to the specification which is laid out by the University, but we of course can't totally predict the algorithm, 
+                            and the rules could change over time. You should take this as a guide, and redirect any serious grade questions to your Chief Examiner or Personal Tutor.
+                        </p>
+                        <div class="hidden lg:block flex-shrink-0 h-10 w-10 rounded-full bg-gray-300 ml-3 place-self-end"></div>
+                    </div>
+                </div> 
+
+                <div class="flex flex-col flex-grow gap-y-8 md:gap-y-16 mt-16">
+                    <hr>
+                    <div class="flex w-full max-w-2xl">
+                        <p class="bg-cyan-800 text-white p-4 md:p-8 rounded-r-3xl rounded-tl-3xl md:text-xl 4xl:text-2xl font-semibold" data-os="fade-right">What about dual programs or more complex degree structures?</p>
+                    </div>
+                    <div class="flex w-full max-w-5xl ml-auto justify-end">
+                        <p class="bg-lime-700 text-white p-4 md:p-8 rounded-l-3xl rounded-tr-3xl font-semibold md:text-lg 4xl:text-2xl">
+                            Unfortunately, we're unable to reliably cover all of these as they would have many exceptions to the normal calculation rules. 
+                            You should still be able to attempt to calculate your classification, but it is not as reliable as a normal program.
+                        </p>
+                        <div class="hidden lg:block flex-shrink-0 h-10 w-10 rounded-full bg-gray-300 ml-3 place-self-end"></div>
+                    </div>
+                </div> 
+
+                <!--Use this as a template for new FAQs-->
+                <!-- 
+                    <div class="flex flex-col flex-grow gap-y-8 md:gap-y-16 mt-16">
+                        <hr>
+                        <div class="flex w-full max-w-2xl">
+                            <p class="bg-cyan-800 text-white p-4 md:p-8 rounded-r-3xl rounded-tl-3xl md:text-xl 4xl:text-2xl font-semibold" data-os="fade-right">Question Text</p>
+                        </div>
+                        <div class="flex w-full max-w-5xl ml-auto justify-end">
+                            <p class="bg-lime-700 text-white p-4 md:p-8 rounded-l-3xl rounded-tr-3xl font-semibold md:text-lg 4xl:text-2xl">
+                                Answer Text
+                            </p>
+                            <div class="hidden lg:block flex-shrink-0 h-10 w-10 rounded-full bg-gray-300 ml-3 place-self-end"></div>
+                        </div>
+                    </div> 
+                -->
+            </section>
+            <div class="p-6 text-center text-white text-xl">
+                <h2 class="text-4xl font-semibold tracking-wide">Can't find your question?</h2>
+                <p class="my-4">Let us know <a href="contact.html" class="font-bold hover:underline">here</a> and we'll answer it as soon as we can</p>
+            </div>
+        </section>
+      </main>
+
+    <footer class="bg-gray-700 py-9">
+        <div class="text-right text-white">
+            <p class="pr-9">&copy; Project Roundtable 2022</p>
+        </div>
+    </footer>
+    
+  <!-- TODO: We may have to change this pathing when it comes to deploying, but this is fine for now. -->   
+  <script src="../node_modules/aos/dist/aos.js"></script>
+  <script>AOS.init()</script>
+</body>
+</html>

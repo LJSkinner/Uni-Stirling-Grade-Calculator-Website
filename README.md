@@ -6,6 +6,15 @@ students calculate their final grade/degree classification. We found that it was
 
 We were inspired by a similar project by a student at Uni of St Andrews. So please go check out their website https://grades.lukasa.co.uk/ and repo https://github.com/Lukasa/st-andrews-grades while you are here.
 
+## Libraries & Frameworks
+We are currently using the following libraries/frameworks in our website: 
+* [Tailwind CSS](https://tailwindcss.com/): We are using Tailwind CSS to streamline the design aspect of this website. 
+* [Animate On Scroll (AOS)](https://github.com/michalsnik/aos/tree/v2): AOS is a JavaScript library that makes adding animations and transitions when scrolling much easier. We are using this to add more life to our website. 
+* [Chart.js](https://www.chartjs.org/): Chart.js is a fairly popular JavaScript library that allows insertion of charts. We are mainly using this to display grade info in a pie chart form.
+* [Node.js](https://nodejs.org/en/): We are using node as our package manager and system of choice for this website.
+
+Please go check out these if you want more information about them, and give them all some support. 
+
 ## Disclaimers & Legal
 First off, we made this for fun and are doing it in our own time. We are not being serviced by the University of Stirling, our website has no formal affliation with the University of Stirling and does not represent their views, policies or other statements. This website is an original creation, an no assets are being used from University of Stirlings own website. The only reference material we used for this website, is the publicly available grade descriptor which can be found at:
 
