@@ -23,7 +23,7 @@
                     <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                         <div id="logo" class="flex flex-shrink-0 items-center space-x-4">
                             <img src=" " class="w-16 h-16 ml-4 border border-1 border-white" alt="Logo">
-                            <h1 class="text-2xl font-semibold"><a href="index.html">Degree Calculator - Stirling</a></h1>
+                            <h1 class="text-xl sm:text-2xl font-semibold"><a href="index.html">Degree Calculator - Stirling</a></h1>
                             <!-- TODO: Layer Stirling beneath Degree Calc 
                                 <h4 class="text-xl">Stirling</h4> -->
                         </div>
@@ -46,14 +46,17 @@
       <!--Main content will go in here-->
       <main class="h-auto text-white text-center">
         <section id="calc-config" class="bg-cyan-800">
-            <h1 class="text-3xl pt-8 font-bold">University of Stirling Undergraduate Degree Calculator</h1>
+            <h1 class="text-2xl sm:text-3xl pt-8 font-bold">University of Stirling Undergraduate Degree Calculator</h1>
             <!--Summary of options chosen from homepage questions-->
-            <div id="config-info" class="text-lg py-12 font-semibold">
-                <div class="bg-white rounded-xl shadow-xl w-max text-black p-6 mx-auto">
+            <div id="config-info" class="sm:text-lg py-12 font-semibold px-4">
+                <div class="bg-white rounded-xl shadow-xl sm:w-max text-black p-6 sm:mx-auto">
                     <p>You have selected to calculate based on:</p>
                     <p id="calc-year">Year(s) = 3</p>
                     <p id="calc-num-modules">Number of Modules = 8</p>
                     <p id="calc-honours">Degree with Honours = No</p>
+                    <div class="pt-4">
+                        <button class="p-1.5 px-4 border-2 border-cyan-800 text-white hover:text-cyan-800 rounded-xl bg-cyan-800 hover:bg-transparent">Change</button>
+                    </div>
                 </div>
                 
             </div>
@@ -151,7 +154,9 @@
                     </div>
 
                     <div class="order-last">
-                        <button class="rounded-xl bg-lime-700 hover:brightness-110 py-4 px-8">Add Module</button>
+                        <button class="rounded-xl bg-lime-700 hover:brightness-110 py-3 px-8">Add Module</button>
+                        <!-- Add some padding between sections on mobile screens -->
+                        <div class="py-8 md:py-0"></div>
                     </div>
                 </section>
 
@@ -161,12 +166,12 @@
                         <div id="predominance-checker" class="text-black bg-white rounded-xl shadow-xl">
                             <div class="grid gap-y-6 p-6">
                                 <h1 class="text-2xl font-bold">Predominance Checker</h1>
-                                <div class="border-2 border-black text-lg rounded-md mx-auto px-4 py-2">Average Module Grade - 65</div>
-                                <h4 class="text-xl font-bold">Modules meeting predominance</h4>
+                                <div class="border-2 border-black sm:text-lg rounded-md mx-auto px-4 py-2">Average Module Grade - 65</div>
+                                <h4 class="text-lg sm:text-xl font-bold">Modules meeting predominance</h4>
                                 <div class="sm:w-3/4 md:w-1/2 xl:w-1/3 2xl:w-3/4 3xl:w-1/2 5xl:w-1/3 sm:mx-auto border border-gray-200 shadow-sm rounded-2xl">
                                     <canvas id="predominance" class="my-4 sm:m-4"></canvas>
                                 </div>
-                                <p class="py-3 bg-lime-700 rounded-md text-white text-xl">Your Predicted Degree Classification is: <strong id="classResult" class="block select-all">2:1 Upper Second Class</strong></p>
+                                <p class="p-3 bg-lime-700 rounded-md text-white text-lg sm:text-xl">Your Predicted Degree Classification is: <strong id="classResult" class="block select-all">2:1 Upper Second Class</strong></p>
                             </div>
                         </div>
 
