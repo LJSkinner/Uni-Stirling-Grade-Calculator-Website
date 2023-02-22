@@ -211,7 +211,7 @@
                             <div class="col-span-11">
                                 <div class="px-6">
                                     <label for="editModName" class="block text-gray-700 font-bold">Module Name</label>
-                                    <input id="editModName" type="text" class="w-full outline-none p-1 mt-1 edit-module-input-disabled placeholder:text-sm sm:placeholder:text-lg" placeholder="CP - Professional Development of Computer Scientists" disabled> 
+                                    <input id="editModName" class="w-full outline-none p-1 mt-1 edit-module-input-disabled placeholder:text-sm sm:placeholder:text-lg" type="text" maxlength="255" placeholder="CP - Professional Development of Computer Scientists" disabled> 
                                 </div>
                             </div>
                             <button class="mt-7 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
@@ -219,7 +219,7 @@
                             <div class="col-span-5">
                                 <div class="px-6">
                                     <label for="editModCredits" class="block text-gray-700 font-bold">Module Credits</label>
-                                    <input id="editModCredits" type="text" class="w-full outline-none p-1 mt-1 edit-module-input-disabled" placeholder="20" disabled> 
+                                    <input id="editModCredits" class="w-full outline-none p-1 mt-1 edit-module-input-disabled" type="number" min="0" max="100" step="5" placeholder="20" disabled> 
                                 </div>
                             </div>
                             <button class="mt-7 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
@@ -227,7 +227,7 @@
                             <div class="col-span-5">
                                 <div class="px-6">
                                     <label for="editModGrade" class="block text-gray-700 font-bold">Module Grade</label>
-                                    <input id="editModGrade" type="text" class="w-full outline-none p-1 mt-1 edit-module-input" placeholder="85"> 
+                                    <input id="editModGrade" class="w-full outline-none p-1 mt-1 edit-module-input" type="number" min="0" max="100" step="1" placeholder="85"> 
                                 </div>
                             </div>
                             <button class="mt-7 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
@@ -239,11 +239,11 @@
 
                         <span class="col-span-4 font-bold">Name</span> <span class="col-span-4 font-bold">Weight</span> <span class="col-span-3 font-bold">Grade</span>
 
-                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" placeholder="TDI Report" disabled>
+                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
 
-                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" placeholder="50%" disabled>
+                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="50%" disabled>
                             
-                            <input class="col-span-3 outline-none text-center edit-module-input-disabled" placeholder="100/100" disabled>
+                            <input class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="100/100" disabled>
 
                             <div class="col-span-1">
                                 <button class="p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
@@ -252,12 +252,11 @@
 
                             <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-
-                            <input class="col-span-4 outline-none edit-module-input" placeholder="Elevator Pitch">
+                            <input class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
                             
-                            <input class="col-span-4 outline-none edit-module-input" placeholder="50%">
+                            <input class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="50%">
                             
-                            <input class="col-span-3 outline-none edit-module-input" placeholder="100/100">
+                            <input class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="100/100">
 
                             <div class="col-span-1">
                                 <button class="hidden p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
