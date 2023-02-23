@@ -1,13 +1,25 @@
-var modal = document.getElementById("editModal");
-var moduleEditBtn = document.getElementById("editModule");
-var modalDiscardBtn = document.getElementById("editModDiscardBtn");
+const editModal = document.getElementById("editModal");
+const moduleEditBtn = document.getElementById("editModule");
+const modalDiscardBtn = document.getElementById("editModDiscardBtn");
+
+const addModal = document.getElementById("addModal");
+const moduleAddBtn = document.getElementById("addModuleBtn");
+const modalCancelBtn = document.getElementById("addModCancelBtn");
 
 moduleEditBtn.onclick = function() {
-    modal.classList.replace("hidden", "block");
+    editModal.classList.replace("hidden", "block");
 }
 
 modalDiscardBtn.onclick = function() {
-    modal.classList.replace("block", "hidden");
+    editModal.classList.replace("block", "hidden");
+}
+
+moduleAddBtn.onclick = function() {
+    addModal.classList.replace("hidden", "block");
+}
+
+modalCancelBtn.onclick = function() {
+    addModal.classList.replace("block", "hidden");
 }
 
 /*

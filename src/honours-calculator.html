@@ -25,6 +25,10 @@
         <symbol id="edit" viewBox="0 0 16 16">
             <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
         </symbol>
+
+        <symbol id="plus" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+        </symbol>
     </svg>
     
 </head>
@@ -162,7 +166,7 @@
                     </div>
 
                     <div class="order-last">
-                        <button class="rounded-xl bg-lime-700 hover:brightness-110 py-3 px-8">Add Module</button>
+                        <button id="addModuleBtn" class="rounded-xl bg-lime-700 hover:brightness-110 py-3 px-8">Add Module</button>
                         <!-- Add some padding between sections on mobile screens -->
                         <div class="py-8 md:py-0"></div>
                     </div>
@@ -271,6 +275,83 @@
                 </div>
             </div>
         </div>
+
+
+        <!--Add module sample modal, again this has no functionality and is not a final design-->
+        <div class="hidden fixed w-full h-full z-0 top-0 left-0 overflow-auto bg-white" id="addModal">
+            <div class="w-full h-max text-gray-700 sm:p-16 bg-cyan-800 py-8 px-4">
+
+                <div class="bg-white rounded-xl shadow-2xl xl:w-1/2 mx-auto">
+
+                    <div class="px-10 pt-8 pb-2">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-left">Add Module</h2>
+                    </div>
+    
+                    <h3 class="text-xl sm:text-2xl font-bold p-4">Module Details</h3>
+                    <div class="p-2 text-left grid grid-cols-5 gap-y-6 sm:w-4/5 mx-auto text-base sm:text-lg">
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="module-name" class="block text-gray-700 font-bold">Module Name</label>
+                                    <input id="module-name" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="text" maxlength="100"> 
+                                </div>
+                            </div>
+                            
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="module-credits" class="block text-gray-700 font-bold">Module Credits</label>
+                                    <input id="module-credits" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
+                                </div>
+                            </div>
+
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="module-grade" class="block text-gray-700 font-bold">Module Grade</label>
+                                    <input id="module-grade" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
+                                </div>
+                            </div>
+                    </div>
+
+                    <h3 class="text-xl sm:text-2xl font-bold p-4 py-8">Assignment Details</h3>
+
+                    <div class="px-2 sm:px-8 w-4/5 mx-auto grid grid-cols-12 gap-y-6 gap-2 sm:gap-4 pb-6 text-sm sm:text-lg">
+
+                        <span class="col-span-4 font-bold">Name</span> <span class="col-span-4 font-bold">Weight</span> <span class="col-span-3 font-bold">Grade</span>
+
+                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
+
+                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="50%" disabled>
+                            
+                            <input class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="100/100" disabled>
+
+                            <button class="p-1.5 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#bin"/></svg></button>
+                            
+                    <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                                <input class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
+                                
+                                <input class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" placeholder="50%">
+                                
+                                <input class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" placeholder="100/100">
+
+                                <button class="p-1.5 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                                
+
+                            <div class="col-span-12">
+                                <button class="rounded-xl border-2 border-transparent hover:border-lime-700 p-3 px-4 text-lime-700 text-base">
+                                    <svg class="w-5 h-5 inline mr-2" fill="currentColor"><use xlink:href="#plus"/></svg>Add Assignment</button>
+                            </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <button id="addModCancelBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Cancel</button>
+                        <button class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Add Module</button>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
       </main>
 
     <footer class="bg-gray-700 py-9">
