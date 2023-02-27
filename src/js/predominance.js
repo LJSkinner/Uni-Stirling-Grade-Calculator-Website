@@ -1,4 +1,4 @@
-new Chart(document.getElementById("predominance"), {
+new Chart(document.getElementById("predominanceChart"), {
 
     type: 'doughnut',
     data: {

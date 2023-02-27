@@ -77,7 +77,7 @@
                     <p id="calc-num-modules">Number of Modules = 8</p>
                     <p id="calc-honours">Degree with Honours = No</p>
                     <div class="pt-4">
-                        <button class="p-1.5 px-4 border-2 border-cyan-800 text-white hover:text-cyan-800 rounded-xl bg-cyan-800 hover:bg-transparent">Change</button>
+                        <button id="editCriteriaBtn" class="p-1.5 px-4 border-2 border-cyan-800 text-white hover:text-cyan-800 rounded-xl bg-cyan-800 hover:bg-transparent">Change</button>
                     </div>
                 </div>
                 
@@ -91,21 +91,21 @@
                 <!--Contains the modules added for Year 4-->
                 <section id="modules" class="text-xl basis-full 2xl:basis-7/12">
                     <!--Contains a single module and all of it's content, the sizing still needs adjusted but this is the initial look-->
-                    <div id="module-container" class="bg-gray-700 rounded-xl m-6 shadow-2xl">
+                    <div id="module-container" class="bg-gray-700 hover:brightness-110 rounded-xl m-6 shadow-2xl select-none">
                         <div class="flex flex-row">
                             <!--Contains module title and edit/delete buttons-->
                             <div class="basis-full md:basis-2/3 md:border-r-2 md:border-r-white lg:basis-7/12">
                                 <div class="grid grid-cols-12 py-4">
                                     <div class="col-span-12 lg:col-span-8">
-                                        <h3 id="moduleTitle" class="p-4 text-ellipsis">CP - Professional Development of Computer Scientists</h1>
+                                        <h3 id="module1Title" class="p-4 text-ellipsis">CP - Professional Development of Computer Scientists</h1>
                                     </div>
                                         
                                     <!--The icons in the buttons below are temporary and may be moved/changed-->
                                     <div class="my-auto col-span-12 lg:col-span-4 space-x-4">
-                                        <button id="editModule" class="border-2 border-white hover:bg-white hover:text-black px-5 py-2 rounded-md">
+                                        <button id="editModule1" class="border-2 border-white hover:bg-white hover:text-black px-5 py-2 rounded-md">
                                             <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#edit"></svg>
                                         </button>
-                                        <button id="deleteModule" class="border-2 border-red-700 bg-red-700 hover:bg-red-600 px-5 py-2 rounded-md">
+                                        <button id="deleteModule1" class="border-2 border-red-700 bg-red-700 hover:bg-red-600 px-5 py-2 rounded-md">
                                             <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#bin"></svg>
                                         </button> 
                                     </div>
@@ -117,32 +117,32 @@
                                 <div class="grid grid-cols-2 h-full place-items-center px-4">
                                     <div class="space-y-2 font-semibold">
                                         <p class="pt-2">Credits</p>
-                                        <p id="moduleCredits" class="pb-2">10</p>
+                                        <p id="module1Credits" class="pb-2">10</p>
                                     </div>
                                     <div class="space-y-2 font-semibold px-4">
                                         <p class="pt-2">Module Grade</p>
-                                        <p id="moduleCredits" class="pb-2">85</p>
+                                        <p id="module1Grade" class="pb-2">85</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div id="module-container" class="bg-cyan-800 rounded-xl m-6 shadow-2xl">
+                    <div id="module-container" class="bg-cyan-800 hover:brightness-110 rounded-xl m-6 shadow-2xl select-none">
                         <div class="flex flex-row">
                             <!--Contains module title and edit/delete buttons-->
                             <div class="basis-full md:basis-2/3 md:border-r-2 md:border-r-white lg:basis-7/12">
                                 <div class="grid grid-cols-12 py-6">
                                     <div class="col-span-12 lg:col-span-8">
-                                        <h3 id="moduleTitle" class="p-4 text-ellipsis">X5 - UX Design</h1>
+                                        <h3 id="module2Title" class="p-4 text-ellipsis">X5 - UX Design</h1>
                                     </div>
                                         
                                     <!--The icons in the buttons below are temporary and may be moved/changed-->
                                     <div class="my-auto col-span-12 lg:col-span-4 space-x-4">
-                                        <button id="editModule" class="border-2 border-white hover:bg-white hover:text-black px-5 py-2 rounded-md">
+                                        <button id="editModule2" class="border-2 border-white hover:bg-white hover:text-black px-5 py-2 rounded-md">
                                             <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#edit"></svg>
                                         </button>
-                                        <button id="deleteModule" class="border-2 border-red-700 bg-red-700 hover:bg-red-600 px-5 py-2 rounded-md">
+                                        <button id="deleteModule2" class="border-2 border-red-700 bg-red-700 hover:bg-red-600 px-5 py-2 rounded-md">
                                             <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#bin"></svg>
                                         </button> 
                                     </div>
@@ -154,11 +154,11 @@
                                 <div class="grid grid-cols-2 h-full place-items-center px-4">
                                     <div class="space-y-2 font-semibold">
                                         <p class="pt-2">Credits</p>
-                                        <p id="moduleCredits" class="pb-2">20</p>
+                                        <p id="module2Credits" class="pb-2">20</p>
                                     </div>
                                     <div class="space-y-2 font-semibold px-4">
                                         <p class="pt-2">Module Grade</p>
-                                        <p id="moduleCredits" class="pb-2">65</p>
+                                        <p id="module2Grade" class="pb-2">65</p>
                                     </div>
                                 </div>
                             </div>
@@ -181,9 +181,9 @@
                                 <div class="border-2 border-black sm:text-lg rounded-md mx-auto px-4 py-2">Average Module Grade - 65</div>
                                 <h4 class="text-lg sm:text-xl font-bold">Modules meeting predominance</h4>
                                 <div class="sm:w-3/4 md:w-1/2 xl:w-1/3 2xl:w-3/4 3xl:w-1/2 5xl:w-1/3 sm:mx-auto border border-gray-200 shadow-sm rounded-2xl">
-                                    <canvas id="predominance" class="my-4 sm:m-4"></canvas>
+                                    <canvas id="predominanceChart" class="my-4 sm:m-4"></canvas>
                                 </div>
-                                <p class="p-3 bg-lime-700 rounded-md text-white text-lg sm:text-xl">Your Predicted Degree Classification is: <strong id="classResult" class="block select-all">2:1 Upper Second Class</strong></p>
+                                <p class="p-3 bg-lime-700 rounded-md text-white text-lg sm:text-xl">Your Predicted Degree Classification is: <strong id="degreeResult" class="block select-all">2:1 Upper Second Class</strong></p>
                             </div>
                         </div>
 
@@ -197,16 +197,19 @@
             </div>
         </section>
 
-        <!--Edit module sample modal, this has no functionality and is not a final design-->
+        <!--Edit module sample modal, this is not a final design-->
         <div class="hidden fixed w-full h-full z-0 top-0 left-0 overflow-auto bg-white" id="editModal">
+            <!--Holds the modal overlay-->
             <div class="w-full h-full text-gray-700 sm:p-16 bg-cyan-800 py-8 px-4">
 
+                <!--Modal container-->
                 <div class="bg-white rounded-xl shadow-2xl xl:w-1/2 mx-auto text-center">
 
                     <div class="px-10 pt-8 pb-2">
                         <h2 class="text-2xl sm:text-3xl font-bold text-left">Edit Module</h2>
                         <div class="block bg-red-100 p-4 my-4 lg:text-lg text-red-700 font-semibold border-l-8 border-red-700">You are currently editing 
-                            <p id="editModTitle" class="font-bold inline">CP - Professional Development of Computer Scientists</p>
+                            <!--Edit module input and button ids will begin with em-->
+                            <p id="emModTitle" class="font-bold inline">CP - Professional Development of Computer Scientists</p>
                         </div>
                     </div>
     
@@ -214,24 +217,24 @@
                     <div class="p-2 text-left grid grid-cols-12 gap-y-6 sm:w-4/5 mx-auto text-base sm:text-lg">
                             <div class="col-span-11">
                                 <div class="px-6">
-                                    <label for="editModName" class="block text-gray-700 font-bold">Module Name</label>
-                                    <input id="editModName" class="w-full outline-none p-1 mt-1 edit-module-input-disabled placeholder:text-sm sm:placeholder:text-lg" type="text" maxlength="255" placeholder="CP - Professional Development of Computer Scientists" disabled> 
+                                    <label for="emModuleName" class="block text-gray-700 font-bold">Module Name</label>
+                                    <input id="emModuleName" class="w-full outline-none p-1 mt-1 edit-module-input-disabled placeholder:text-sm sm:placeholder:text-lg" type="text" maxlength="255" placeholder="CP - Professional Development of Computer Scientists" disabled> 
                                 </div>
                             </div>
                             <button class="mt-7 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
                             
                             <div class="col-span-5">
                                 <div class="px-6">
-                                    <label for="editModCredits" class="block text-gray-700 font-bold">Module Credits</label>
-                                    <input id="editModCredits" class="w-full outline-none p-1 mt-1 edit-module-input-disabled" type="number" min="0" max="100" step="5" placeholder="20" disabled> 
+                                    <label for="emModuleCredits" class="block text-gray-700 font-bold">Module Credits</label>
+                                    <input id="emModuleCredits" class="w-full outline-none p-1 mt-1 edit-module-input-disabled" type="number" min="0" max="100" step="5" placeholder="20" disabled> 
                                 </div>
                             </div>
                             <button class="mt-7 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
 
                             <div class="col-span-5">
                                 <div class="px-6">
-                                    <label for="editModGrade" class="block text-gray-700 font-bold">Module Grade</label>
-                                    <input id="editModGrade" class="w-full outline-none p-1 mt-1 edit-module-input" type="number" min="0" max="100" step="1" placeholder="85"> 
+                                    <label for="emModuleGrade" class="block text-gray-700 font-bold">Module Grade</label>
+                                    <input id="emModuleGrade" class="w-full outline-none p-1 mt-1 edit-module-input" type="number" min="0" max="100" step="1" placeholder="85"> 
                                 </div>
                             </div>
                             <button class="mt-7 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
@@ -243,41 +246,41 @@
 
                         <span class="col-span-4 font-bold">Name</span> <span class="col-span-4 font-bold">Weight</span> <span class="col-span-3 font-bold">Grade</span>
 
-                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
+                            <input id="emAsgmt1Name" class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
 
-                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="50%" disabled>
+                            <input id="emAsgmt1Weight" class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="50%" disabled>
                             
-                            <input class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="100/100" disabled>
+                            <input id="emAsgmt1Grade" class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="100/100" disabled>
 
                             <div class="col-span-1">
-                                <button class="p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
-                                <button class="hidden p-1.5"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                                <button id="emAsgmt1EditBtn" class="p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
+                                <button id="emAsgmt1TickBtn" class="hidden p-1.5"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
                             </div>
 
-                            <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+                    <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-                            <input class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
-                            
-                            <input class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="50%">
-                            
-                            <input class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="100/100">
+                                <input id="emAsgmt2Name" class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
+                                
+                                <input id="emAsgmt2Weight" class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="50%">
+                                
+                                <input id="emAsgmt2Grade" class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="100/100">
 
-                            <div class="col-span-1">
-                                <button class="hidden p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
-                                <button class="p-1.5"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
-                            </div>
+                                <div class="col-span-1">
+                                    <button id="emAsgmt2EditBtn" class="hidden p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
+                                    <button id="emAsgmt2TickBtn" class="p-1.5"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                                </div>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-b-xl">
-                        <button id="editModDiscardBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Discard</button>
-                        <button class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Save Changes</button>
+                        <button id="emDiscardBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Discard</button>
+                        <button id="emSaveBtn" class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Save Changes</button>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <!--Add module sample modal, again this has no functionality and is not a final design-->
+        <!--Add module sample modal, again this is not a final design-->
         <div class="hidden fixed w-full h-full z-0 top-0 left-0 overflow-auto bg-white" id="addModal">
             <div class="w-full h-max text-gray-700 sm:p-16 bg-cyan-800 py-8 px-4">
 
@@ -291,22 +294,23 @@
                     <div class="p-2 text-left grid grid-cols-5 gap-y-6 sm:w-4/5 mx-auto text-base sm:text-lg">
                             <div class="col-span-5">
                                 <div class="px-6">
-                                    <label for="module-name" class="block text-gray-700 font-bold">Module Name</label>
-                                    <input id="module-name" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="text" maxlength="100"> 
+                                    <!--Add module input and button ids will begin with am-->
+                                    <label for="amModuleName" class="block text-gray-700 font-bold">Module Name</label>
+                                    <input id="amModuleName" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="text" maxlength="100"> 
                                 </div>
                             </div>
                             
                             <div class="col-span-5">
                                 <div class="px-6">
-                                    <label for="module-credits" class="block text-gray-700 font-bold">Module Credits</label>
-                                    <input id="module-credits" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
+                                    <label for="amModuleCredits" class="block text-gray-700 font-bold">Module Credits</label>
+                                    <input id="amModuleCredits" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
                                 </div>
                             </div>
 
                             <div class="col-span-5">
                                 <div class="px-6">
-                                    <label for="module-grade" class="block text-gray-700 font-bold">Module Grade</label>
-                                    <input id="module-grade" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
+                                    <label for="amModuleGrade" class="block text-gray-700 font-bold">Module Grade</label>
+                                    <input id="amModuleGrade" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
                                 </div>
                             </div>
                     </div>
@@ -317,36 +321,35 @@
 
                         <span class="col-span-4 font-bold">Name</span> <span class="col-span-4 font-bold">Weight</span> <span class="col-span-3 font-bold">Grade</span>
 
-                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
+                            <input id="amAsgmt1Name" class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
 
-                            <input class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="50%" disabled>
+                            <input id="amAsgmt1Weight" class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="50%" disabled>
                             
-                            <input class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="100/100" disabled>
+                            <input id="amAsgmt1Grade" class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="100/100" disabled>
 
-                            <button class="p-1.5 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#bin"/></svg></button>
+                            <button id="amAsgmt1DelBtn" class="p-1.5 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#bin"/></svg></button>
                             
                     <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-                                <input class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
+                                <input id="amAsgmt2Name" class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
                                 
-                                <input class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" placeholder="50%">
+                                <input id="amAsgmt2Weight" class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" placeholder="50%">
                                 
-                                <input class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" placeholder="100/100">
+                                <input id="amAsgmt2Grade" class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" placeholder="100/100">
 
-                                <button class="p-1.5 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                                <button id="amAsgmt2DelBtn" class="p-1.5 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
                                 
 
                             <div class="col-span-12">
-                                <button class="rounded-xl border-2 border-transparent hover:border-lime-700 p-3 px-4 text-lime-700 text-base">
+                                <button id="amAddAsgmtBtn" class="rounded-xl border-2 border-transparent hover:border-lime-700 p-3 px-4 text-lime-700 text-base">
                                     <svg class="w-5 h-5 inline mr-2" fill="currentColor"><use xlink:href="#plus"/></svg>Add Assignment</button>
                             </div>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-b-xl">
-                        <button id="addModCancelBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Cancel</button>
-                        <button class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Add Module</button>
+                        <button id="amCancelBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Cancel</button>
+                        <button id="amSaveBtn" class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Add Module</button>
                     </div>
-
                     
                 </div>
             </div>
