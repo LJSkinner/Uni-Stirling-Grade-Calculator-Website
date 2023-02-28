@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+
+    .edit-module-input {
+        @apply rounded-md border border-gray-300 focus:border-gray-700 p-1 shadow-sm text-center text-sm sm:text-lg;
+    }
+
+    .edit-module-input-disabled {
+        @apply cursor-not-allowed placeholder:text-gray-700;
+    }
+}

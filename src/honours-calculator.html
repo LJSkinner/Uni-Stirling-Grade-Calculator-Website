@@ -9,6 +9,28 @@
     <!-- TODO: We may have to change this pathing when it comes to deploying, but this is fine for now. -->
     <link rel="stylesheet" href="../node_modules/aos/dist/aos.css">
     <title>Degree Calculator - Stirling | Honours Calculator</title>
+    
+    <!-- Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="tick" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+        </symbol>
+
+        <symbol id="bin" viewBox="0 0 16 16">
+            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+        </symbol>
+
+        <symbol id="edit" viewBox="0 0 16 16">
+            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+        </symbol>
+
+        <symbol id="plus" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+        </symbol>
+    </svg>
+    
 </head>
 <body class="h-screen">
 
@@ -23,7 +45,7 @@
                     <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                         <div id="logo" class="flex flex-shrink-0 items-center space-x-4">
                             <img src=" " class="w-16 h-16 ml-4 border border-1 border-white" alt="Logo">
-                            <h1 class="text-2xl font-semibold"><a href="index.html">Degree Calculator - Stirling</a></h1>
+                            <h1 class="text-xl sm:text-2xl font-semibold"><a href="index.html">Degree Calculator - Stirling</a></h1>
                             <!-- TODO: Layer Stirling beneath Degree Calc 
                                 <h4 class="text-xl">Stirling</h4> -->
                         </div>
@@ -44,7 +66,294 @@
       </header>
 
       <!--Main content will go in here-->
-      <main class="h-screen">
+      <main class="h-auto text-white text-center">
+        <section id="calc-config" class="bg-cyan-800">
+            <h1 class="text-2xl sm:text-3xl pt-8 font-bold">University of Stirling Undergraduate Degree Calculator</h1>
+            <!--Summary of options chosen from homepage questions-->
+            <div id="config-info" class="sm:text-lg py-12 font-semibold px-4">
+                <div class="bg-white rounded-xl shadow-xl sm:w-max text-black p-6 sm:mx-auto">
+                    <p>You have selected to calculate based on:</p>
+                    <p id="calc-year">Year(s) = 3</p>
+                    <p id="calc-num-modules">Number of Modules = 8</p>
+                    <p id="calc-honours">Degree with Honours = No</p>
+                    <div class="pt-4">
+                        <button id="editCriteriaBtn" class="p-1.5 px-4 border-2 border-cyan-800 text-white hover:text-cyan-800 rounded-xl bg-cyan-800 hover:bg-transparent">Change</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="1-year-calc" class="bg-neutral-200">
+            <h2 class="text-2xl bg-gray-700 font-semibold p-6 mb-2">Year 3</h1>
+            <!--Holds the modules and predominance checker for year 4-->
+            <div id="year-4-content" class="flex flex-row flex-wrap w-full">
+                <!--Contains the modules added for Year 4-->
+                <section id="modules" class="text-xl basis-full 2xl:basis-7/12">
+                    <!--Contains a single module and all of it's content, the sizing still needs adjusted but this is the initial look-->
+                    <div id="module-container" class="bg-gray-700 hover:brightness-110 rounded-xl m-6 shadow-2xl select-none">
+                        <div class="flex flex-row">
+                            <!--Contains module title and edit/delete buttons-->
+                            <div class="basis-full md:basis-2/3 md:border-r-2 md:border-r-white lg:basis-7/12">
+                                <div class="grid grid-cols-12 py-4">
+                                    <div class="col-span-12 lg:col-span-8">
+                                        <h3 id="module1Title" class="p-4 text-ellipsis">CP - Professional Development of Computer Scientists</h1>
+                                    </div>
+                                        
+                                    <!--The icons in the buttons below are temporary and may be moved/changed-->
+                                    <div class="my-auto col-span-12 lg:col-span-4 space-x-4">
+                                        <button id="editModule1" class="border-2 border-white hover:bg-white hover:text-black px-5 py-2 rounded-md">
+                                            <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#edit"></svg>
+                                        </button>
+                                        <button id="deleteModule1" class="border-2 border-red-700 bg-red-700 hover:bg-red-600 px-5 py-2 rounded-md">
+                                            <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#bin"></svg>
+                                        </button> 
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <!--Displays module credits and overall module grade, only visible on md or larger screens-->
+                            <div class="hidden md:inline-block md:basis-1/3 lg:basis-5/12">
+                                <div class="grid grid-cols-2 h-full place-items-center px-4">
+                                    <div class="space-y-2 font-semibold">
+                                        <p class="pt-2">Credits</p>
+                                        <p id="module1Credits" class="pb-2">10</p>
+                                    </div>
+                                    <div class="space-y-2 font-semibold px-4">
+                                        <p class="pt-2">Module Grade</p>
+                                        <p id="module1Grade" class="pb-2">85</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="module-container" class="bg-cyan-800 hover:brightness-110 rounded-xl m-6 shadow-2xl select-none">
+                        <div class="flex flex-row">
+                            <!--Contains module title and edit/delete buttons-->
+                            <div class="basis-full md:basis-2/3 md:border-r-2 md:border-r-white lg:basis-7/12">
+                                <div class="grid grid-cols-12 py-6">
+                                    <div class="col-span-12 lg:col-span-8">
+                                        <h3 id="module2Title" class="p-4 text-ellipsis">X5 - UX Design</h1>
+                                    </div>
+                                        
+                                    <!--The icons in the buttons below are temporary and may be moved/changed-->
+                                    <div class="my-auto col-span-12 lg:col-span-4 space-x-4">
+                                        <button id="editModule2" class="border-2 border-white hover:bg-white hover:text-black px-5 py-2 rounded-md">
+                                            <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#edit"></svg>
+                                        </button>
+                                        <button id="deleteModule2" class="border-2 border-red-700 bg-red-700 hover:bg-red-600 px-5 py-2 rounded-md">
+                                            <svg class="h-6 w-6" fill="currentColor"><use xlink:href="#bin"></svg>
+                                        </button> 
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            <!--Displays module credits and overall module grade, only visible on md or larger screens-->
+                            <div class="hidden md:inline-block md:basis-1/3 lg:basis-5/12">
+                                <div class="grid grid-cols-2 h-full place-items-center px-4">
+                                    <div class="space-y-2 font-semibold">
+                                        <p class="pt-2">Credits</p>
+                                        <p id="module2Credits" class="pb-2">20</p>
+                                    </div>
+                                    <div class="space-y-2 font-semibold px-4">
+                                        <p class="pt-2">Module Grade</p>
+                                        <p id="module2Grade" class="pb-2">65</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="order-last">
+                        <button id="addModuleBtn" class="rounded-xl bg-lime-700 hover:brightness-110 py-3 px-8">Add Module</button>
+                        <!-- Add some padding between sections on mobile screens -->
+                        <div class="py-8 md:py-0"></div>
+                    </div>
+                </section>
+
+                <!--Contains the predominance checker and grade boundary summary-->
+                <section id="predominance-info" class="basis-full 2xl:basis-5/12 px-4 2xl:pr-4 2xl:pl-0">
+                    <div class="flex flex-col py-6">
+                        <div id="predominance-checker" class="text-black bg-white rounded-xl shadow-xl">
+                            <div class="grid gap-y-6 p-6">
+                                <h1 class="text-2xl font-bold">Predominance Checker</h1>
+                                <div class="border-2 border-black sm:text-lg rounded-md mx-auto px-4 py-2">Average Module Grade - 65</div>
+                                <h4 class="text-lg sm:text-xl font-bold">Modules meeting predominance</h4>
+                                <div class="sm:w-3/4 md:w-1/2 xl:w-1/3 2xl:w-3/4 3xl:w-1/2 5xl:w-1/3 sm:mx-auto border border-gray-200 shadow-sm rounded-2xl">
+                                    <canvas id="predominanceChart" class="my-4 sm:m-4"></canvas>
+                                </div>
+                                <p class="p-3 bg-lime-700 rounded-md text-white text-lg sm:text-xl">Your Predicted Degree Classification is: <strong id="degreeResult" class="block select-all">2:1 Upper Second Class</strong></p>
+                            </div>
+                        </div>
+
+                        <div id="grade-boundaries" class="text-black bg-white rounded-xl shadow-xl font-semibold text-lg p-3 mt-6 pb-6">
+                            <p class="text-2xl font-bold p-2">Grade Boundaries</p>
+                            <p class="select-all">1st Class (70+) <br> 2:1 Upper Second Class Division (60-69) <br> 2:2 Lower Second Class Division (50-59) <br> 3rd Class (40-49)</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </section>
+
+        <!--Edit module sample modal, this is not a final design-->
+        <div class="hidden fixed w-full h-full z-0 top-0 left-0 overflow-auto bg-white" id="editModal">
+            <!--Holds the modal overlay-->
+            <div class="w-full h-full text-gray-700 sm:p-16 bg-cyan-800 py-8 px-4">
+
+                <!--Modal container-->
+                <div class="bg-white rounded-xl shadow-2xl xl:w-1/2 mx-auto text-center">
+
+                    <div class="px-10 pt-8 pb-2">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-left">Edit Module</h2>
+                        <div class="block bg-red-100 p-4 my-4 lg:text-lg text-red-700 font-semibold border-l-8 border-red-700">You are currently editing 
+                            <!--Edit module input and button ids will begin with em-->
+                            <p id="emModTitle" class="font-bold inline">CP - Professional Development of Computer Scientists</p>
+                        </div>
+                    </div>
+    
+                    <h3 class="text-xl sm:text-2xl font-bold p-4">Module Details</h3>
+                    <div class="p-2 text-left grid grid-cols-12 gap-y-6 sm:w-4/5 mx-auto text-base sm:text-lg">
+                            <div class="col-span-11">
+                                <div class="px-6">
+                                    <label for="emModuleName" class="block text-gray-700 font-bold">Module Name</label>
+                                    <input id="emModuleName" class="w-full outline-none p-1 mt-1 edit-module-input-disabled placeholder:text-sm sm:placeholder:text-lg" type="text" maxlength="255" placeholder="CP - Professional Development of Computer Scientists" disabled> 
+                                </div>
+                            </div>
+                            <button class="mt-7 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
+                            
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="emModuleCredits" class="block text-gray-700 font-bold">Module Credits</label>
+                                    <input id="emModuleCredits" class="w-full outline-none p-1 mt-1 edit-module-input-disabled" type="number" min="0" max="100" step="5" placeholder="20" disabled> 
+                                </div>
+                            </div>
+                            <button class="mt-7 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
+
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="emModuleGrade" class="block text-gray-700 font-bold">Module Grade</label>
+                                    <input id="emModuleGrade" class="w-full outline-none p-1 mt-1 edit-module-input" type="number" min="0" max="100" step="1" placeholder="85"> 
+                                </div>
+                            </div>
+                            <button class="mt-7 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                    </div>
+
+                    <h3 class="text-xl sm:text-2xl font-bold p-4 py-8">Assignment Details</h3>
+
+                    <div class="px-2 sm:px-8 grid grid-cols-12 sm:w-4/5 mx-auto gap-2 sm:gap-4 pb-6 sm:pb-12 text-sm sm:text-lg">
+
+                        <span class="col-span-4 font-bold">Name</span> <span class="col-span-4 font-bold">Weight</span> <span class="col-span-3 font-bold">Grade</span>
+
+                            <input id="emAsgmt1Name" class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
+
+                            <input id="emAsgmt1Weight" class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="50%" disabled>
+                            
+                            <input id="emAsgmt1Grade" class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" step="10" placeholder="100/100" disabled>
+
+                            <div class="col-span-1">
+                                <button id="emAsgmt1EditBtn" class="p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
+                                <button id="emAsgmt1TickBtn" class="hidden p-1.5"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                            </div>
+
+                    <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                                <input id="emAsgmt2Name" class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
+                                
+                                <input id="emAsgmt2Weight" class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="50%">
+                                
+                                <input id="emAsgmt2Grade" class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" step="10" placeholder="100/100">
+
+                                <div class="col-span-1">
+                                    <button id="emAsgmt2EditBtn" class="hidden p-1.5"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#edit"/></svg></button>
+                                    <button id="emAsgmt2TickBtn" class="p-1.5"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                                </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <button id="emDiscardBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Discard</button>
+                        <button id="emSaveBtn" class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Add module sample modal, again this is not a final design-->
+        <div class="hidden fixed w-full h-full z-0 top-0 left-0 overflow-auto bg-white" id="addModal">
+            <div class="w-full h-max text-gray-700 sm:p-16 bg-cyan-800 py-8 px-4">
+
+                <div class="bg-white rounded-xl shadow-2xl xl:w-1/2 mx-auto">
+
+                    <div class="px-10 pt-8 pb-2">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-left">Add Module</h2>
+                    </div>
+    
+                    <h3 class="text-xl sm:text-2xl font-bold p-4">Module Details</h3>
+                    <div class="p-2 text-left grid grid-cols-5 gap-y-6 sm:w-4/5 mx-auto text-base sm:text-lg">
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <!--Add module input and button ids will begin with am-->
+                                    <label for="amModuleName" class="block text-gray-700 font-bold">Module Name</label>
+                                    <input id="amModuleName" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="text" maxlength="100"> 
+                                </div>
+                            </div>
+                            
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="amModuleCredits" class="block text-gray-700 font-bold">Module Credits</label>
+                                    <input id="amModuleCredits" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
+                                </div>
+                            </div>
+
+                            <div class="col-span-5">
+                                <div class="px-6">
+                                    <label for="amModuleGrade" class="block text-gray-700 font-bold">Module Grade</label>
+                                    <input id="amModuleGrade" class="w-full outline-none p-1 mt-1 pl-2 edit-module-input text-left" type="number" min="0" max="100"> 
+                                </div>
+                            </div>
+                    </div>
+
+                    <h3 class="text-xl sm:text-2xl font-bold p-4 py-8">Assignment Details</h3>
+
+                    <div class="px-2 sm:px-8 w-4/5 mx-auto grid grid-cols-12 gap-y-6 gap-2 sm:gap-4 pb-6 text-sm sm:text-lg">
+
+                        <span class="col-span-4 font-bold">Name</span> <span class="col-span-4 font-bold">Weight</span> <span class="col-span-3 font-bold">Grade</span>
+
+                            <input id="amAsgmt1Name" class="col-span-4 outline-none text-center edit-module-input-disabled" type="text" maxlength="255" placeholder="TDI Report" disabled>
+
+                            <input id="amAsgmt1Weight" class="col-span-4 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="50%" disabled>
+                            
+                            <input id="amAsgmt1Grade" class="col-span-3 outline-none text-center edit-module-input-disabled" type="number" min="0" max="100" placeholder="100/100" disabled>
+
+                            <button id="amAsgmt1DelBtn" class="p-1.5 w-min"> <svg class="h-7 w-7 text-red-700 hover:brightness-125" fill="currentColor"><use xlink:href="#bin"/></svg></button>
+                            
+                    <!----------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+                                <input id="amAsgmt2Name" class="col-span-4 outline-none edit-module-input" type="text" maxlength="255" placeholder="Elevator Pitch">
+                                
+                                <input id="amAsgmt2Weight" class="col-span-4 outline-none edit-module-input" type="number" min="0" max="100" placeholder="50%">
+                                
+                                <input id="amAsgmt2Grade" class="col-span-3 outline-none edit-module-input" type="number" min="0" max="100" placeholder="100/100">
+
+                                <button id="amAsgmt2DelBtn" class="p-1.5 w-min"> <svg class="h-7 w-7 text-lime-700 hover:brightness-125" fill="currentColor"><use xlink:href="#tick"/></svg></button>
+                                
+
+                            <div class="col-span-12">
+                                <button id="amAddAsgmtBtn" class="rounded-xl border-2 border-transparent hover:border-lime-700 p-3 px-4 text-lime-700 text-base">
+                                    <svg class="w-5 h-5 inline mr-2" fill="currentColor"><use xlink:href="#plus"/></svg>Add Assignment</button>
+                            </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-b-xl">
+                        <button id="amCancelBtn" class="inline-flex rounded-xl bg-red-700 hover:brightness-110 text-white p-3 px-6 font-bold">Cancel</button>
+                        <button id="amSaveBtn" class="inline-flex ml-4 rounded-xl bg-lime-700 hover:brightness-110 p-3 px-6 text-white font-bold">Add Module</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
 
       </main>
 
@@ -56,6 +365,8 @@
     
   <!-- TODO: We may have to change this pathing when it comes to deploying, but this is fine for now. --> 
   <script src="../node_modules/chart.js/dist/chart.umd.js"></script>
+  <script src="js/predominance.js"></script>
+  <script src="js/undergrad.js"></script>
   <script src="../node_modules/aos/dist/aos.js"></script>
   <script>AOS.init()</script>
 </body>
