@@ -701,10 +701,6 @@ video {
   margin-bottom: 3rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
 .block {
   display: block;
 }
@@ -807,10 +803,6 @@ video {
   width: 83.333333%;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -833,10 +825,6 @@ video {
 
 .basis-full {
   flex-basis: 100%;
-}
-
-.basis-11\/12 {
-  flex-basis: 91.666667%;
 }
 
 .select-none {
@@ -1281,20 +1269,12 @@ video {
   padding-left: 0.5rem;
 }
 
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
-.pt-3 {
-  padding-top: 0.75rem;
+.pb-0 {
+  padding-bottom: 0px;
 }
 
 .pt-16 {
   padding-top: 4rem;
-}
-
-.pb-0 {
-  padding-bottom: 0px;
 }
 
 .pb-8 {
@@ -1475,21 +1455,6 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-blue-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-green-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 83 45 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-indigo-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(49 46 129 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-cyan-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(14 94 111 / var(--tw-bg-opacity));
@@ -1577,14 +1542,6 @@ video {
     padding-bottom: 3rem;
   }
 
-  .sm\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .sm\:pr-12 {
-    padding-right: 3rem;
-  }
-
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1653,10 +1610,6 @@ video {
     flex-basis: 33.333333%;
   }
 
-  .md\:basis-full {
-    flex-basis: 100%;
-  }
-
   .md\:items-stretch {
     align-items: stretch;
   }
@@ -1688,22 +1641,6 @@ video {
 
   .md\:py-0 {
     padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
-  .md\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .md\:pr-24 {
-    padding-right: 6rem;
-  }
-
-  .md\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .md\:pb-0 {
     padding-bottom: 0px;
   }
 
@@ -1775,22 +1712,6 @@ video {
     flex-basis: 41.666667%;
   }
 
-  .lg\:basis-1\/2 {
-    flex-basis: 50%;
-  }
-
-  .lg\:basis-1\/5 {
-    flex-basis: 20%;
-  }
-
-  .lg\:pl-12 {
-    padding-left: 3rem;
-  }
-
-  .lg\:pr-12 {
-    padding-right: 3rem;
-  }
-
   .lg\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1836,24 +1757,12 @@ video {
     width: 100%;
   }
 
-  .xl\:basis-1\/2 {
-    flex-basis: 50%;
-  }
-
   .xl\:rounded-xl {
     border-radius: 0.75rem;
   }
 
   .xl\:border-8 {
     border-width: 8px;
-  }
-
-  .xl\:pl-24 {
-    padding-left: 6rem;
-  }
-
-  .xl\:pr-24 {
-    padding-right: 6rem;
   }
 
   .xl\:text-6xl {

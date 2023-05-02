@@ -1,10 +1,10 @@
 const editModal = document.getElementById("editModal");
-const moduleEditBtn = document.getElementById("editModule");
-const modalDiscardBtn = document.getElementById("emDiscardBtn");
+const moduleEditBtn = document.getElementById("moduleEditBtn");
+const modalDiscardBtn = document.getElementById("editModalDiscardBtn");
 
 const addModal = document.getElementById("addModal");
-const createModBtn = document.getElementById("addModuleBtn");
-const modalCancelBtn = document.getElementById("amCancelBtn");
+const createModuleBtn = document.getElementById("addModuleBtn");
+const modalCancelBtn = document.getElementById("addModalCancelBtn");
 
 moduleEditBtn.onclick = function() {
     editModal.classList.replace("hidden", "block");
@@ -14,7 +14,7 @@ modalDiscardBtn.onclick = function() {
     editModal.classList.replace("block", "hidden");
 }
 
-createModBtn.onclick = function() {
+createModuleBtn.onclick = function() {
     addModal.classList.replace("hidden", "block");
 }
 
